@@ -1,4 +1,5 @@
 import 'package:clean_arc/core/router/routers.dart';
+import 'package:clean_arc/pages/home/home_page.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
