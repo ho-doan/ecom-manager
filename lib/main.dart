@@ -85,6 +85,8 @@ class _MainPageState extends State<MainPage> {
       return Container();
       case 'Các danh mục cần quản lí':
       return Container();
+      case 'Hỗ trợ khách hàng':
+      return Container();
       case 'Báo cáo thống kê':
       return Container();
       case 'Cài đặt':
@@ -160,6 +162,10 @@ _setPage(String page){
               _itemMenu(
             menu: 'Các danh mục cần quản lí',
             icon: Icons.edit_note_rounded,
+          ),
+          _itemMenu(
+            menu: 'Hỗ trợ khách hàng',
+            icon: Icons.chat_bubble_outline_outlined,
           ),
            _itemMenu(
             menu: 'Báo cáo thống kê',
