@@ -38,7 +38,7 @@ class _RootPageState extends State<RootPage> {
     return PageView(
       controller: controller,
       children: const [
-        HomePage(),
+        // HomePage(),
         ProfilePage(),
       ],
     );
