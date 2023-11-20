@@ -7,6 +7,7 @@ enum Auth{
   signin,
   signup,
 }
+//dòng code trên định nghĩa kiểu dữ liệu có tên Auth
 
 class AuthScreen extends StatefulWidget {
   static const String routeName='/auth-screen';
@@ -67,6 +68,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   },
                 ),
               ),
+              //tạo radio cho mục tạo tài khoản
               if(_auth==Auth.signup)
                 Container(
                   padding: const EdgeInsets.all(8),
@@ -98,7 +100,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     ),
                   ),
                 ),
-                //39:00
+                //các form để điền vào trong mục radio tạo tài khoản
               ListTile(
                 tileColor: _auth == Auth.signin
                 ?GlobalVariables.backgroundColor
@@ -119,6 +121,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   },
                 ),
               ),
+              //tạo radio cho mục đăng nhập
               if(_auth==Auth.signin)
                 Container(
                   padding: const EdgeInsets.all(8),
@@ -145,6 +148,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     ),
                   ),
                 ),
+                //các form để điền vào cũng như nút của radio đăng nhập
             ],
           ),
         )

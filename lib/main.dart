@@ -249,7 +249,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
+//Phần super.key ở trên chỉ định rằng hàm tạo này đang gọi hàm tạo của lớp cha (StatelessWidget) với tham số key.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -267,6 +267,7 @@ class MyApp extends StatelessWidget {
         )
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
+      //hàm trên dùng để điều hướng đến một trang khác
       home: const AuthScreen(),
     );
   }
