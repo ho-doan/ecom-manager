@@ -1,5 +1,6 @@
 import 'package:clean_arc/core/router/router_path.dart';
 import 'package:clean_arc/core/services/di/service_locator.dart';
+import 'package:clean_arc/features/auth/screens/auth_screen.dart';
 import 'package:clean_arc/pages/app.dart';
 import 'package:clean_arc/pages/home/cubits/home/home_cubit.dart';
 import 'package:clean_arc/pages/home/home_page.dart';
@@ -14,7 +15,26 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../pages/error/error_page.dart';
 
 part 'routers.g.dart';
-
+//code mới
+Route<dynamic> generateRoute(RouteSettings routeSettings){
+  switch(routeSettings.name){
+    case AuthScreen.routeName:
+    return MaterialPageRoute(
+      settings: routeSettings,
+      builder: (_)=>const AuthScreen(),
+    );
+    default:
+    return MaterialPageRoute(
+      settings: routeSettings,
+      builder: (_)=>const Scaffold(
+        body: Center(
+          child: Text('Trang này không tồn tại!!'),
+        ),
+      ),
+      ); 
+  }
+}
+//----------------------------------------------------------------------------
 class Routes {
   Routes();
 
@@ -83,7 +103,7 @@ class HomeRoutePage extends GoRouteData {
   Widget build(context, state) {
     return BlocProvider(
       create: (context) => getIt<HomeCubit>()..onInit(),
-      child: const HomePage(),
+      // child: const HomePage(),
     );
   }
 }
